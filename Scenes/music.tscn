@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btp7ggyo6frlx"]
 
-[ext_resource type="AudioStream" uid="uid://cbcwhk5i5vpx3" path="res://1/music/time_for_adventure.mp3" id="1_nth1j"]
+[ext_resource type="AudioStream" uid="uid://cbcwhk5i5vpx3" path="res://Assets/music/time_for_adventure.mp3" id="1_nth1j"]
 
 [node name="Music" type="AudioStreamPlayer2D"]
 position = Vector2(-58, -50)

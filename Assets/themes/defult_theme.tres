@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cogmyurnfghts"]
+
+[ext_resource type="FontFile" uid="uid://1h4a758w0a4a" path="res://Assets/fonts/DungeonFont.ttf" id="1_2rg1y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqg0s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gbm4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_84b10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5kqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7w32j"]
+
+[resource]
+default_font = ExtResource("1_2rg1y")
+default_font_size = 26
+Button/colors/font_focus_color = Color(0.634997, 0.532024, 0.180068, 1)
+Button/colors/font_hover_color = Color(0.635294, 0.533333, 0.180392, 1)
+Button/colors/font_pressed_color = Color(0.635294, 0.533333, 0.180392, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_jqg0s")
+Button/styles/focus = SubResource("StyleBoxEmpty_gbm4m")
+Button/styles/hover = SubResource("StyleBoxEmpty_84b10")
+Button/styles/normal = SubResource("StyleBoxEmpty_y5kqe")
+Button/styles/pressed = SubResource("StyleBoxEmpty_7w32j")

@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://cn2mhirvqfa0m" path="res://Scenes/player.tscn" id="1_fv3i0"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_xel54"]
-[ext_resource type="Texture2D" uid="uid://b3mvfdbc7ktmh" path="res://1/sprites/world_tileset.png" id="2_h76hp"]
+[ext_resource type="Texture2D" uid="uid://b3mvfdbc7ktmh" path="res://Assets/sprites/world_tileset.png" id="2_h76hp"]
 [ext_resource type="PackedScene" uid="uid://c3p6cx48fmxtf" path="res://Scenes/platform.tscn" id="3_d68tk"]
 [ext_resource type="PackedScene" uid="uid://4mf8sbfqhvwy" path="res://Scenes/coin.tscn" id="4_r3f7v"]
 [ext_resource type="PackedScene" uid="uid://dldy11cv0uk03" path="res://Scenes/kilzone.tscn" id="5_if003"]
 [ext_resource type="PackedScene" uid="uid://dd8ax8yg1frie" path="res://Scenes/slime.tscn" id="6_j5f4n"]
-[ext_resource type="FontFile" uid="uid://cto5fywjvotod" path="res://1/fonts/PixelOperator8.ttf" id="8_lcos8"]
+[ext_resource type="FontFile" uid="uid://cto5fywjvotod" path="res://Assets/fonts/PixelOperator8.ttf" id="8_lcos8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7prv7"]
 texture = ExtResource("2_h76hp")
