@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://clvdxuo3tywhn"]
+[gd_scene load_steps=5 format=3 uid="uid://clvdxuo3tywhn"]
 
+[ext_resource type="Theme" uid="uid://cogmyurnfghts" path="res://Assets/themes/defult_theme.tres" id="1_b5vwm"]
 [ext_resource type="FontFile" uid="uid://1h4a758w0a4a" path="res://Assets/fonts/DungeonFont.ttf" id="1_mn1cq"]
 [ext_resource type="Script" path="res://Scenes/Ui/death/death_screen.gd" id="1_sh7jd"]
+
+[sub_resource type="Theme" id="Theme_4yaqn"]
 
 [node name="DeathScreen" type="Control"]
 layout_mode = 3
@@ -10,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_b5vwm")
 script = ExtResource("1_sh7jd")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -53,3 +57,21 @@ vertical_alignment = 1
 [node name="ButtonsVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = SubResource("Theme_4yaqn")
+theme_override_fonts/font = ExtResource("1_mn1cq")
+text = "Continue"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("1_mn1cq")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/QuitButton" to="." method="_on_quit_button_pressed"]
