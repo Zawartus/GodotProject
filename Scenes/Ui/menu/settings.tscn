@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4s0rx3r0xknc"]
+
+[ext_resource type="FontFile" uid="uid://1h4a758w0a4a" path="res://Assets/fonts/DungeonFont.ttf" id="1_ue1hn"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0282071, 0.0819991, 0.128079, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ue1hn")
+theme_override_font_sizes/font_size = 96
+text = "Credits
+"
+
+[node name="Label3" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_ue1hn")
+theme_override_font_sizes/font_size = 33
+text = "Franciszek Golas
+"
+
+[node name="Label2" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.664598, 0.462067, 0.225337, 1)
+theme_override_fonts/font = ExtResource("1_ue1hn")
+theme_override_font_sizes/font_size = 25
+text = "Pixel art
+"
