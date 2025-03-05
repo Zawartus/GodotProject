@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cogmyurnfghts" path="res://Assets/themes/defult_theme.tres" id="1_b5vwm"]
 [ext_resource type="FontFile" uid="uid://1h4a758w0a4a" path="res://Assets/fonts/DungeonFont.ttf" id="1_mn1cq"]
-[ext_resource type="Script" path="res://Scenes/Ui/death/death_screen.gd" id="1_sh7jd"]
+[ext_resource type="Script" uid="uid://cc4ioekaoxwl4" path="res://Scenes/Ui/death/death_screen.gd" id="1_sh7jd"]
 
 [sub_resource type="Theme" id="Theme_4yaqn"]
 

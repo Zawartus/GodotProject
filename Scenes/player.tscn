@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=3 uid="uid://cn2mhirvqfa0m"]
+[gd_scene load_steps=32 format=3 uid="uid://cn2mhirvqfa0m"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_i37ma"]
+[ext_resource type="Script" uid="uid://cm20merv7jinv" path="res://scripts/player.gd" id="1_i37ma"]
 [ext_resource type="Texture2D" uid="uid://h8oaiycfxvtm" path="res://Assets/sprites/knight.png" id="1_kec0y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dsfim"]
@@ -213,6 +213,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6dha"]
 radius = 5.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvnsp"]
+bg_color = Color(0.195039, 0.180844, 0.169875, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t5aa"]
+bg_color = Color(0.561448, 0.191414, 0.150724, 1)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
 collision_layer = 2
@@ -228,3 +234,14 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_j6dha")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -76.0
+offset_top = 22.0
+offset_right = -5.0
+offset_bottom = 41.0
+theme_override_styles/background = SubResource("StyleBoxFlat_cvnsp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6t5aa")
+max_value = 10.0
+value = 5.0
+show_percentage = false

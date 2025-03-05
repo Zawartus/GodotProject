@@ -1,10 +1,19 @@
 extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var health_bar: ProgressBar = $HealthBar
 
 const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
 @onready var scene_a = $"../kilzone"  # Odwołanie do ScenaA
+
+var health = 10
+
+func _ready() -> void:
+	health_bar.value = health
+
+
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
