@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://btp7ggyo6frlx"]
 
-[ext_resource type="AudioStream" uid="uid://cbcwhk5i5vpx3" path="res://Assets/music/time_for_adventure.mp3" id="1_nth1j"]
+[ext_resource type="AudioStream" uid="uid://c8wbbnmxpgtrw" path="res://Assets/music/Letters of Melancholy (Piano Loop l Melancholic l Emotional).wav" id="1_fbmny"]
 
 [node name="Music" type="AudioStreamPlayer2D"]
 position = Vector2(-58, -50)
-stream = ExtResource("1_nth1j")
+stream = ExtResource("1_fbmny")
 autoplay = true
 bus = &"Music"

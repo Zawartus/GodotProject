@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8wbbnmxpgtrw"
+path="res://.godot/imported/Letters of Melancholy (Piano Loop l Melancholic l Emotional).wav-0c9c874cc4d9e7fbbc760cdcbce04fd8.sample"
+
+[deps]
+
+source_file="res://Assets/music/Letters of Melancholy (Piano Loop l Melancholic l Emotional).wav"
+dest_files=["res://.godot/imported/Letters of Melancholy (Piano Loop l Melancholic l Emotional).wav-0c9c874cc4d9e7fbbc760cdcbce04fd8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
