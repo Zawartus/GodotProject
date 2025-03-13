@@ -123,6 +123,11 @@ animations = [{
 "name": &"Idle",
 "speed": 10.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"KnightRun",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5ibob")
@@ -223,7 +228,7 @@ script = ExtResource("1_i37ma")
 position = Vector2(-0.5, -0.5)
 scale = Vector2(0.96875, 0.96875)
 sprite_frames = SubResource("SpriteFrames_3kaon")
-animation = &"run"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
