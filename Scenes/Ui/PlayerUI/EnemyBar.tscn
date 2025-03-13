@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq858n4d5xaum"]
+
+[ext_resource type="Script" uid="uid://yreyh14o2nt" path="res://Scenes/Ui/PlayerUI/enemy_bar.gd" id="1_q3oso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3oso"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gijt4"]
+bg_color = Color(0.482276, 0, 0.11466, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gijt4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftl1b"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="EnemyBar" type="ProgressBar"]
+offset_right = 400.0
+offset_bottom = 28.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_q3oso")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gijt4")
+value = 100.0
+show_percentage = false
+script = ExtResource("1_q3oso")
+
+[node name="DamageBar" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_gijt4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ftl1b")
+value = 80.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true

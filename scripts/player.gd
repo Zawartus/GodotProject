@@ -7,14 +7,6 @@ const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
 @onready var scene_a = $"../kilzone"  # Odwołanie do ScenaA
 
-var health = 10
-
-func _ready() -> void:
-	health_bar.value = health
-
-
-
-
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
