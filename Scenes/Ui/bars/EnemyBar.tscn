@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cq858n4d5xaum"]
 
-[ext_resource type="Script" uid="uid://yreyh14o2nt" path="res://Scenes/Ui/PlayerUI/enemy_bar.gd" id="1_q3oso"]
+[ext_resource type="Script" uid="uid://yreyh14o2nt" path="res://Scenes/Ui/bars/enemy_bar.gd" id="1_q3oso"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3oso"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dw7qodri33owd"]
+[gd_scene load_steps=21 format=3 uid="uid://dw7qodri33owd"]
 
 [ext_resource type="Script" uid="uid://ei2p4eo4ljdv" path="res://scripts/game_manager.gd" id="1_ce5c8"]
 [ext_resource type="FontFile" uid="uid://cto5fywjvotod" path="res://Assets/fonts/PixelOperator8.ttf" id="2_c11q5"]
@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://4mf8sbfqhvwy" path="res://Scenes/coin.tscn" id="6_ahqd5"]
 [ext_resource type="PackedScene" uid="uid://c3p6cx48fmxtf" path="res://Scenes/platform.tscn" id="7_dw2ve"]
 [ext_resource type="PackedScene" uid="uid://dd8ax8yg1frie" path="res://Scenes/slime.tscn" id="8_8u2a7"]
-[ext_resource type="PackedScene" uid="uid://cq858n4d5xaum" path="res://Scenes/Ui/PlayerUI/EnemyBar.tscn" id="9_c11q5"]
+[ext_resource type="PackedScene" uid="uid://cq858n4d5xaum" path="res://Scenes/Ui/bars/EnemyBar.tscn" id="9_c11q5"]
+[ext_resource type="PackedScene" uid="uid://cgxygtqxraa7j" path="res://Scenes/Enemys/Slime.tscn" id="12_xdwyp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce5c8"]
 texture = ExtResource("3_q2try")
@@ -650,3 +651,12 @@ offset_bottom = -38.0
 theme_override_fonts/font = ExtResource("2_c11q5")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump"
+
+[node name="Slime_test" parent="." instance=ExtResource("12_xdwyp")]
+position = Vector2(160, -12)
+
+[node name="EnemyBar" parent="Slime_test" instance=ExtResource("9_c11q5")]
+offset_left = -8.0
+offset_top = -7.0
+offset_right = 8.0
+offset_bottom = -4.0
