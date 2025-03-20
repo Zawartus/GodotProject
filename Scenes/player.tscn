@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://cn2mhirvqfa0m"]
+[gd_scene load_steps=40 format=3 uid="uid://cn2mhirvqfa0m"]
 
 [ext_resource type="Script" uid="uid://cm20merv7jinv" path="res://scripts/player.gd" id="1_i37ma"]
 [ext_resource type="Texture2D" uid="uid://h8oaiycfxvtm" path="res://Assets/sprites/knight.png" id="1_kec0y"]
 [ext_resource type="Texture2D" uid="uid://21t6onvlynff" path="res://Assets/sprites/KnightSprites/Idle.png" id="2_x3wgy"]
 [ext_resource type="PackedScene" uid="uid://bt1nr1fgqrhxn" path="res://Scenes/Ui/bars/HealthBar.tscn" id="3_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://b8171ms07nrjp" path="res://Assets/sprites/KnightSprites/Attacks.png" id="3_8erm5"]
 [ext_resource type="Texture2D" uid="uid://cymxv0i3rre3l" path="res://Assets/sprites/KnightSprites/Jump.png" id="4_3smsa"]
 [ext_resource type="Texture2D" uid="uid://b03anq5h5i8qr" path="res://Assets/sprites/KnightSprites/Run.png" id="5_8erm5"]
 [ext_resource type="Script" uid="uid://ce0hyliplpy0x" path="res://Scenes/HitBox.gd" id="6_3smsa"]
@@ -23,6 +24,38 @@ region = Rect2(168, 128, 42, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
 atlas = ExtResource("2_x3wgy")
 region = Rect2(168, 192, 42, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olqyp"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjfl"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bi64h"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ijsl"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(384, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1odr"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(512, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gysh"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(640, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfarp"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(768, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6uwr"]
+atlas = ExtResource("3_8erm5")
+region = Rect2(896, 0, 128, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ibob"]
 atlas = ExtResource("1_kec0y")
@@ -102,6 +135,44 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_olqyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bi64h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ijsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1odr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gysh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfarp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6uwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bi64h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olqyp")
+}],
+"loop": false,
+"name": &"attack_slash",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5ibob")
 }, {
 "duration": 1.0,
@@ -162,11 +233,72 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3smsa"]
-radius = 13.4193
-height = 28.6613
+radius = 11.6937
+height = 49.242
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olqyp"]
 size = Vector2(18, 46)
+
+[sub_resource type="Animation" id="Animation_83xs0"]
+resource_name = "slash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.03226, 7.22581), Vector2(12.3871, 7.22581)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/HitBox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_ypfnu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/HitBox/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.03226, 7.22581)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/HitBox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xuaoq"]
+_data = {
+&"RESET": SubResource("Animation_ypfnu"),
+&"slash": SubResource("Animation_83xs0")
+}
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -177,21 +309,21 @@ script = ExtResource("1_i37ma")
 position = Vector2(-1, -11)
 scale = Vector2(0.96875, 0.96875)
 sprite_frames = SubResource("SpriteFrames_3kaon")
-animation = &"Idle"
+animation = &"attack_slash"
 autoplay = "Idle"
-frame_progress = 0.0488071
 
 [node name="HitBox" type="Area2D" parent="AnimatedSprite2D"]
 script = ExtResource("6_3smsa")
 metadata/_custom_type_script = "uid://ce0hyliplpy0x"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/HitBox"]
-position = Vector2(20.6452, 10.3226)
-rotation = 1.95151
+position = Vector2(1.03226, 7.22581)
+rotation = -0.00420073
 shape = SubResource("CapsuleShape2D_3smsa")
+disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, -3)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_olqyp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -205,3 +337,8 @@ offset_top = -79.0
 offset_right = 241.0
 offset_bottom = -39.0
 grow_vertical = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xuaoq")
+}

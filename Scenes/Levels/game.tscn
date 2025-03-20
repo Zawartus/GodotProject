@@ -655,7 +655,7 @@ text = "Space to jump"
 [node name="Slime_test" parent="." instance=ExtResource("12_xdwyp")]
 position = Vector2(160, -12)
 
-[node name="EnemyBar" parent="Slime_test" instance=ExtResource("9_c11q5")]
+[node name="EnemyBar2" parent="Slime_test" instance=ExtResource("9_c11q5")]
 offset_left = -8.0
 offset_top = -7.0
 offset_right = 8.0

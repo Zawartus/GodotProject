@@ -1,45 +1,69 @@
 extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer  # Dodaj AnimationPlaye
 @onready var health_bar: ProgressBar = $HealthBar
+@onready var scene_a = $"../kilzone"  # Odwołanie do ScenaA
 
 const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
-@onready var scene_a = $"../kilzone"  # Odwołanie do ScenaA
+
+var attacking = false  # Dodaj zmienną ataku
+
+func attack():
+	if attacking:
+		return  # Jeśli już atakujemy, nie pozwalamy na ponowne wykonanie
+
+	attacking = true
+	animated_sprite_2d.play("attack_slash")
+	animation_player.play("slash")
+
+	# Podłączamy sygnał do funkcji, ale nie blokujemy działania kodu
+	animated_sprite_2d.animation_finished.connect(_on_attack_finished, CONNECT_ONE_SHOT)
+
+func _on_attack_finished():
+	attacking = false  # Teraz postać może znowu się poruszać
+
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Zablokowanie ruchu, jeśli postać atakuje
+	if attacking:
+		velocity.x = 0
+		return
+	
+	# Dodanie grawitacji
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.y += 980 * delta  # Standardowa grawitacja
 
-	# Handle jump.
+	# Skakanie
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	#get input direction -1, 0, 1
+	# Pobranie kierunku ruchu (-1, 0, 1)
 	var direction := Input.get_axis("move_left", "move_right")
-	#flip
-	if direction>0:
+
+	# Obracanie postaci
+	if direction > 0:
 		animated_sprite_2d.flip_h = false
-	elif direction <0:
+	elif direction < 0:
 		animated_sprite_2d.flip_h = true
 	
-	# PLay animations
+	# Animacje
 	if is_on_floor():
 		if direction == 0:
-			animated_sprite_2d.play("Idle")
+			if Input.is_action_just_pressed("attack"):
+				attack()
+			else:
+				animated_sprite_2d.play("Idle")
 		else:
 			animated_sprite_2d.play("run")
 	else:
 		animated_sprite_2d.play("jumping")
 		
-	#movment
+	# Ruch postaci
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	#comabat system
-	 
 
 	move_and_slide()
