@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgxygtqxraa7j"]
+[gd_scene load_steps=15 format=3 uid="uid://cgxygtqxraa7j"]
 
 [ext_resource type="Texture2D" uid="uid://drj117klkdl7v" path="res://Assets/sprites/slime_green.png" id="1_d0rml"]
 [ext_resource type="Script" uid="uid://2x8adwienhdx" path="res://Scenes/Enemys/EnemyHit.gd" id="1_siajr"]
 [ext_resource type="Script" uid="uid://gimqrd6amp0q" path="res://Scenes/HurtBox.gd" id="2_oikvo"]
+[ext_resource type="PackedScene" uid="uid://cq858n4d5xaum" path="res://Scenes/Ui/bars/EnemyBar.tscn" id="4_bij8s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2kxms"]
 atlas = ExtResource("1_d0rml")
@@ -93,3 +94,9 @@ position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_siajr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="EnemyBar" parent="." instance=ExtResource("4_bij8s")]
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = -5.0
